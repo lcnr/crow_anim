@@ -58,6 +58,13 @@ impl AnimationStorage {
         idx
     }
 
+    pub fn start(&self, handle: AnimationHandle) -> AnimationState {
+        AnimationState {
+            current: handle,
+            frame: 0,
+        }
+    }
+
     pub fn next(&self, state: &mut AnimationState) -> Sprite {
         let anim = self.get(state.current);
         let frame = anim.frames.get(state.frame).unwrap();
