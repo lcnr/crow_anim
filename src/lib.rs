@@ -1,4 +1,4 @@
-//! A simple animation library using with the `crow` rendering crate.
+//! A simple animation library using the `crow` rendering crate.
 use crow::Texture;
 
 #[derive(Debug, Clone)]
