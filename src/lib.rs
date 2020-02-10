@@ -19,6 +19,15 @@ pub struct Animation {
     pub next: AnimationHandle,
 }
 
+impl Animation {
+    pub fn empty() -> Self {
+        Animation {
+            frames: Vec::new(),
+            next: AnimationHandle(0),
+        }
+    }
+}
+
 #[derive(Debug, Default, Clone, Copy, PartialEq, Eq)]
 pub struct AnimationHandle(usize);
 
